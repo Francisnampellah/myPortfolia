@@ -94,7 +94,7 @@ const Navbar = () => {
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
-          <Image src="/dribbble.png" alt="" width={24} height={24} />
+          <Image src="/Xtwitter.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
           <Image src="/instagram.png" alt="" width={24} height={24} />
