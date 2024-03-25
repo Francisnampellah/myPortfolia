@@ -49,7 +49,7 @@ Baraka Francis Nampellah is a multifaceted professional at the intersection of t
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
-            <div className="self-end">
+          {/*  <div className="self-end">
               <svg
                 width="185"
                 height="77"
@@ -64,7 +64,7 @@ Baraka Francis Nampellah is a multifaceted professional at the intersection of t
                 />
               </svg>
             </div>
-            {/* BIOGRAPHY SCROLL SVG */}
+             BIOGRAPHY SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}

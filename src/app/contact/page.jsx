@@ -44,7 +44,7 @@ const ContactPage = () => {
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
           <div>
-            
+
             {text.split("").map((letter, index) => (
               <motion.span
                 key={index}
@@ -71,7 +71,7 @@ const ContactPage = () => {
           <span>Dear Nampellah,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-white border-b-2 border-b-black outline-none resize-none"
             name="user_message"
           />
           <span>My mail address is:</span>
