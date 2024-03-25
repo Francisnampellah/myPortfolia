@@ -7,7 +7,7 @@ import NavLink from "./navLink";
 import { motion } from "framer-motion";
 
 const links = [
-  { url: "/home", title: "Home" },
+  { url: "/", title: "Home" },
   { url: "/about", title: "About" },
   { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },

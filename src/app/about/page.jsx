@@ -8,7 +8,6 @@ import Anime3 from "../../../public/Anime3"
 const AboutPage = () => {
   const containerRef = useRef();
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
