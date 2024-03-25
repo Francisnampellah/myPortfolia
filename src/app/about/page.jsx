@@ -40,9 +40,9 @@ const AboutPage = () => {
               className="w-28 h-28 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl" style={{fontFamily:'Poppins'}}>BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl" style={{fontFamily:"Poppins"}}>BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg text-justify " style={{fontFamily:'Poppins'}}>
+            <p className="text-lg text-justify " style={{fontFamily:"Poppins"}}>
           
 Baraka Francis Nampellah is a multifaceted professional at the intersection of technology and creativity. With a diploma in Telecommunication and Electronics Engineering from Arusha Technical College and a Bachelors degree in Computer Engineering from Dar es Salaam Institute of Technology, Baraka brings a wealth of technical expertise to his work. With over three years of experience specializing in mobile development using React Native and web design with Next.js, coupled with five years of proficiency in Adobe design tools, Barakas contributions to the field are marked by innovation and excellence.
             </p>
