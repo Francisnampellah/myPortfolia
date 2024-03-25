@@ -1,9 +1,7 @@
 "use client";
-
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import Anime from '../../public/Anime1.json'
+import Anime from "../../public/Anime1.json"
 
 const Homepage = () => {
   return (
@@ -40,7 +38,7 @@ const Homepage = () => {
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
             </button>
-            <a href='/about'>
+            <a href="/about">
 
             <button  className="p-4 rounded-lg ring-1 ring-black">
               About Me

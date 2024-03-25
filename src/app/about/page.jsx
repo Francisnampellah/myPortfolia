@@ -1,5 +1,4 @@
 "use client";
-import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
@@ -238,7 +237,7 @@ Baraka Francis Nampellah is a multifaceted professional at the intersection of t
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
                     I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
+                    frameworks.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
