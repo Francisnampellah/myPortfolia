@@ -3,6 +3,8 @@ import Brain from "@/components/brain";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import Lottie from "lottie-react";
+import Anime3 from "../../../public/Anime3"
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -26,25 +28,23 @@ const AboutPage = () => {
       {/* CONTAINER */}
       <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-4 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/DIT.png"
               alt=""
               width={112}
               height={112}
               className="w-28 h-28 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl" style={{fontFamily:'Poppins'}}>BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+            <p className="text-lg text-justify " style={{fontFamily:'Poppins'}}>
+          
+Baraka Francis Nampellah is a multifaceted professional at the intersection of technology and creativity. With a diploma in Telecommunication and Electronics Engineering from Arusha Technical College and a Bachelor's degree in Computer Engineering from Dar es Salaam Institute of Technology, Baraka brings a wealth of technical expertise to his work. With over three years of experience specializing in mobile development using React Native and web design with Next.js, coupled with five years of proficiency in Adobe design tools, Baraka's contributions to the field are marked by innovation and excellence.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -326,9 +326,16 @@ const AboutPage = () => {
           </div>
         </div>
         {/* SVG CONTAINER */}
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
-          <Brain scrollYProgress={scrollYProgress} />
+
+        <div className="hidden lg:flex flex-1 w-1/2 sticky top-0 z-30 xl:w-1/2">
+        <Lottie
+            animationData={Anime3}
+            fill
+            className="flex justify-center items-center object-contain"
+            loop={true}
+          />
         </div>
+
       </div>
     </motion.div>
   );

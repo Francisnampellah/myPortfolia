@@ -7,7 +7,7 @@ import NavLink from "./navLink";
 import { motion } from "framer-motion";
 
 const links = [
-  { url: "/", title: "Home" },
+  { url: "/home", title: "Home" },
   { url: "/about", title: "About" },
   { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },
@@ -143,10 +143,10 @@ const Navbar = () => {
             {links.map((link) => (
               <motion.div
                 variants={listItemVariants}
-                className=""
                 key={link.title}
+               onClick={()=>setOpen(!open)}
               >
-                <Link href={link.url}>{link.title}</Link>
+                <Link href={link.url}  style={{fontFamily:'Poppins-Bold',fontWeight:'bolder'}}>{link.title}</Link>
               </motion.div>
             ))}
           </motion.div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import Anime from '../../public/Anime1.json'
+import Anime from '../../../public/Anime1.json'
 
 const Homepage = () => {
   return (
