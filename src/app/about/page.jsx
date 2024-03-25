@@ -44,7 +44,7 @@ const AboutPage = () => {
             {/* BIOGRAPHY DESC */}
             <p className="text-lg text-justify " style={{fontFamily:'Poppins'}}>
           
-Baraka Francis Nampellah is a multifaceted professional at the intersection of technology and creativity. With a diploma in Telecommunication and Electronics Engineering from Arusha Technical College and a Bachelor's degree in Computer Engineering from Dar es Salaam Institute of Technology, Baraka brings a wealth of technical expertise to his work. With over three years of experience specializing in mobile development using React Native and web design with Next.js, coupled with five years of proficiency in Adobe design tools, Baraka's contributions to the field are marked by innovation and excellence.
+Baraka Francis Nampellah is a multifaceted professional at the intersection of technology and creativity. With a diploma in Telecommunication and Electronics Engineering from Arusha Technical College and a Bachelors degree in Computer Engineering from Dar es Salaam Institute of Technology, Baraka brings a wealth of technical expertise to his work. With over three years of experience specializing in mobile development using React Native and web design with Next.js, coupled with five years of proficiency in Adobe design tools, Barakas contributions to the field are marked by innovation and excellence.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
