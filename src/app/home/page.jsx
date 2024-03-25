@@ -28,11 +28,11 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <div className="flex-1 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* TITLE */}
-          <h1 className="md:text-3xl font-bold">
+          <h1 className="md:text-4xl font-bold">
           Crafting the Future: Where Code Wizardry Meets Design Mastery
           </h1>
           {/* DESC */}
-          <p className="md:text-xl">
+          <p className="align-justify md:text-xl">
          Experience the future with seamless integration of code wizardry and design mastery, creating innovative solutions that redefine industry standards.
           </p>
           {/* BUTTONS */}

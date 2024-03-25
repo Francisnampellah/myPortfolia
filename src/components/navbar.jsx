@@ -102,10 +102,7 @@ const Navbar = () => {
         <Link href="/">
           <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
+         <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
@@ -144,7 +141,7 @@ const Navbar = () => {
               <motion.div
                 variants={listItemVariants}
                 key={link.title}
-               onClick={()=>setOpen(!open)}
+               onClick={()=>(setOpen(!open),console.log('clicked'))}
               >
                 <Link href={link.url}  style={{fontFamily:'Poppins-Bold',fontWeight:'bolder'}}>{link.title}</Link>
               </motion.div>

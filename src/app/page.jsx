@@ -28,14 +28,17 @@ const Homepage = () => {
           Crafting the Future: Where Code Wizardry Meets Design Mastery 
           </h1>
           {/* DESC */}
-          <p className="md:text-xl">
+          <p className="md:text-xl text-justify">
          Experience the future with seamless integration of code wizardry and design mastery, creating innovative solutions that redefine industry standards.
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
+          <a href="/portfolio">
+
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
             </button>
+          </a>
             <a href="/about">
 
             <button  className="p-4 rounded-lg ring-1 ring-black">

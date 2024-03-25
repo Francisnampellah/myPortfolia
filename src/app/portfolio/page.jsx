@@ -58,10 +58,10 @@ const PortfolioPage = () => {
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-[#FEFFFE] to-[#BDBDBD]" />
             {items.map((item) => (
               <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r from-[#FEFFFE] to-[#BDBDBD]`}
                 key={item.id}
               >
                 <div className="flex flex-col gap-8 text-white">
@@ -83,7 +83,7 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+     { /* <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
         <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
@@ -111,7 +111,7 @@ const PortfolioPage = () => {
             Hire Me
           </Link>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
