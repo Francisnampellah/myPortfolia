@@ -3,7 +3,7 @@ import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Lottie from "lottie-react";
-import Anime3 from "../../../public/Anime3"
+import Anime3 from "../../../public/themagic"
 
 const AboutPage = () => {
   const containerRef = useRef();
