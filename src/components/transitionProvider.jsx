@@ -8,6 +8,10 @@ import { usePathname } from "next/navigation";
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
 
+ function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   return (
     <AnimatePresence mode="wait">
       <div
@@ -27,7 +31,7 @@ const TransitionProvider = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {pathName.substring(1)}
+          {capitalizeFirstLetter(pathName.substring(1))}
         </motion.div>
         <motion.div
           className="h-screen w-screen fixed bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-slate-800/30 rounded-t-[100px] bottom-0 z-30"
