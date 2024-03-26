@@ -38,7 +38,28 @@ const items = [
   },
 ];
 
+const tabs_data = {
+  "tab1": [
+      "/DIT.png",
+      "/DIT.jpg",
+      "/DIT.png",
+      "/DIT.jpg",
+  ],
+  "tab2": [
+      "/works/tab11.jpg",
+      "/works/tab12.jpg",
+      "/works/tab13.jpg",
+  ],
+  "tab3": [
+      "/works/tab21.jpg",
+      "/works/tab22.jpg",
+      "/works/tab23.jpg",
+  ],
+}
+
 const PortfolioPage = () => {
+
+  const [imageUrls, setImageUrls] = useState(tabs_data["tab1" ]);
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
@@ -50,20 +71,20 @@ const PortfolioPage = () => {
 
   useEffect(() => {
     firstBtnRef.current.focus();
+ 
   }, []);
+  
+  
+  
 
 
-  const imageUrls = [
-    "/DIT.png",
-    "/DIT.jpg", 
-    "/DIT.png",
-    "/DIT.jpg",
-];
+
+
 
 
   return (
     <motion.div
-      className="h-full pt-16"
+      className="h-full pt-16 no-scrollbar"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -71,31 +92,35 @@ const PortfolioPage = () => {
       
 
 
-      <div className='flex justify-center items-center py-12'>
-      <div className='w-full flex flex-col gap-y-2'>
-        <div className='rounded-xl flex justify-between items-center font-bold text-black bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30'>
+      <div className='flex justify-center items-center py-2 no-scrollbar'>
+      <div className='w-full flex flex-col gap-y-2 no-scrollbar'>
+        <div className='p-2 m-2 rounded-xl flex flex-row justify-between items-center font-bold text-black bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30 no-scrollbar'>
+
           {items.map((item, index) => (
             <button
-              ref={index === 0 ? firstBtnRef : null}
+            ref={index === 0 ? firstBtnRef : null}
               key={index}
               onClick={() => setSelectedTab(index)}
               className={`outline-none w-full p-2 hover:bg-slate-300/30 rounded-xl text-cneter focus:bg-slate-500/70 focus:text-white ${
-                selectedTab === index ? 'p-4 text-white bg-slate-400/100 rounded-lg shadow-md border border-slate-400/100' : ''
+                selectedTab === index ? 'p-4 text-white bg-slate-400/100 rounded-lg shadow-md border border-slate-400/100': ''
               } `}
             >
+              {console.log(selectedTab)}
               {item.title}
             </button>
           ))}
+
+
         </div>
 
-        <div className='p-2 rounded-xl'>
-          {items.map((item, index) => (
-            <div className={`${selectedTab === index ? '' : 'hidden'}`}>
-              {item.content}
-            </div>
-          ))}
+      
 
-          <Carousel images={imageUrls} />
+
+          <div className="p-4 m-2 font-bold text-black bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
+<Carousel images={imageUrls} />
+
+
+         
 
           
      </div>
