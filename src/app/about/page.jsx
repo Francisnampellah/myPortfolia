@@ -40,19 +40,19 @@ const AboutPage = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="h-full "
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-full overflow-scroll lg:flex no-scrollbar" ref={containerRef}>
 
       
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:m-16 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2  ">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2  ">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col gap-4  justify-center items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4  ">
+          <div className="flex flex-col gap-4 md:mt-16  justify-center items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4  ">
             {/* BIOGRAPHY IMAGE */}
             <Image
               src="/DIT.png"
@@ -173,7 +173,7 @@ const AboutPage = () => {
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className=" items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Senior JavaScript Engineer
                   </div>
                   {/* JOB DESC */}
@@ -186,7 +186,7 @@ const AboutPage = () => {
                     2024 - Present
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                  <div className="p-1 rounded  items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  text-sm font-semibold w-fit">
                     Blue Code
                   </div>
                 </div>
@@ -195,7 +195,7 @@ const AboutPage = () => {
                   {/* LINE */}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-slate-400/30 bg-slate-400/100 -left-2  items-center justify-center bg-gray-400/30  shadow-md backdrop-blur border border-gray-400/30 "></div>
                   </div>
                 </div>
                 {/* RIGHT */}
@@ -210,13 +210,13 @@ const AboutPage = () => {
                   {/* LINE */}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-slate-400/30 bg-slate-400/100 -left-2  items-center justify-center bg-gray-400/30  shadow-md backdrop-blur border border-gray-400/30"></div>
                   </div>
                 </div>
                 {/* RIGHT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className=" items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Senior React Developer
                   </div>
                   {/* JOB DESC */}
@@ -229,7 +229,7 @@ const AboutPage = () => {
                     2023 - current {" "}
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                  <div className="p-1 rounded  items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  text-sm font-semibold w-fit">
                     Pro Design
                   </div>
                 </div>
@@ -239,7 +239,7 @@ const AboutPage = () => {
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className=" items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  p-3 font-semibold rounded-b-lg rounded-s-lg">
                     Freelancer{" "}
                   </div>
                   {/* JOB DESC */}
@@ -257,7 +257,7 @@ const AboutPage = () => {
                   {/* LINE */}
                   <div className="w-1 h-full bg-gray-600 rounded relative">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-slate-400/30 bg-slate-400/100 -left-2  items-center justify-center bg-gray-400/30  shadow-md backdrop-blur border border-gray-400/30"></div>
                   </div>
                 </div>
                 {/* RIGHT */}

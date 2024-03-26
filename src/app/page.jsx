@@ -25,7 +25,7 @@ const Homepage = () => {
         <div className="flex-1 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4 flex-end">
           {/* TITLE * */}
           <h1 className="md:text-3xl font-bold">
-          Crafting the Future: Where Code Wizardry Meets Design Mastery 
+          Crafting the Future
           </h1>
           {/* DESC */}
           <p className="md:text-xl text-justify">

@@ -14,5 +14,22 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.no-scrollbar': {
+          /* For Webkit-based browsers */
+          '::-webkit-scrollbar': {
+            display: 'none'
+          },
+          /* For IE and Edge */
+          '-ms-overflow-style': 'none',  
+          /* For Firefox */
+          'scrollbar-width': 'none'  
+        }
+      };
+
+      addUtilities(newUtilities);
+    }
+  ],
 };

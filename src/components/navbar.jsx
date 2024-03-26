@@ -69,7 +69,7 @@ const Navbar = () => {
   };
 
   return (
-    <div  className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30 m-0.5">
+    <div  className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
