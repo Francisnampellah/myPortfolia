@@ -69,7 +69,7 @@ const Navbar = () => {
   };
 
   return (
-    <div  className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-white/20 rounded-lg shadow-md backdrop-blur border border-white/30 m-0.5">
+    <div  className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30 m-0.5">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
@@ -132,7 +132,7 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="absolute top-0 left-0 w-screen h-screen text-white flex flex-col items-center justify-center gap-8 text-4xl z-40 bg-slate-800/80 rounded-lg shadow-md backdrop-blur border border-slate-800/30 "
           >
             {links.map((link) => (
               <motion.div
