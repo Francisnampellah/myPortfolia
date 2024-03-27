@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import Anime from "../../../public/Anime1.json"
+import Anime from "../../../public/Anime1.json";
 
 const Homepage = () => {
   return (
@@ -29,11 +29,13 @@ const Homepage = () => {
         <div className="flex-1 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* TITLE */}
           <h1 className="md:text-4xl font-bold">
-          Crafting the Future: Where Code Wizardry Meets Design Mastery
+            Crafting the Future: Where Code Wizardry Meets Design Mastery
           </h1>
           {/* DESC */}
           <p className="align-justify md:text-xl">
-         Experience the future with seamless integration of code wizardry and design mastery, creating innovative solutions that redefine industry standards.
+            Experience the future with seamless integration of code wizardry and
+            design mastery, creating innovative solutions that redefine industry
+            standards.
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
@@ -41,10 +43,9 @@ const Homepage = () => {
               View My Work
             </button>
             <a href="/about">
-
-            <button  className="p-4 rounded-lg ring-1 ring-black">
-              About Me
-            </button>
+              <button className="p-4 rounded-lg ring-1 ring-black">
+                About Me
+              </button>
             </a>
           </div>
         </div>

@@ -69,7 +69,7 @@ const Navbar = () => {
   };
 
   return (
-    <div  className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
+    <div className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
@@ -82,7 +82,7 @@ const Navbar = () => {
           href="/"
           className="text-sm  rounded-md p-1 font-semibold flex items-center justify-center"
         >
-         <Image src={'/blue.png'} width={50} height={50}/>
+          <Image src={"/blue.png"} width={50} height={50} />
         </Link>
       </div>
       {/* SOCIAL */}
@@ -99,7 +99,7 @@ const Navbar = () => {
         <Link href="/">
           <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
-         <Link href="/">
+        <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
@@ -138,11 +138,38 @@ const Navbar = () => {
               <motion.div
                 variants={listItemVariants}
                 key={link.title}
-               onClick={()=>(setOpen(!open),console.log('clicked'))}
+                onClick={() => (setOpen(!open), console.log("clicked"))}
               >
-                <Link href={link.url}  style={{fontFamily:'Poppins-Bold',fontWeight:'bolder'}}>{link.title}</Link>
+                <Link
+                  href={link.url}
+                  style={{ fontFamily: "Poppins-Bold", fontWeight: "bolder" }}
+                >
+                  {link.title}
+                </Link>
               </motion.div>
             ))}
+            <motion.div
+              variants={listItemVariants}
+              key={"social"}
+              className=" flex flex-row gap-4 w-1/2"
+              onClick={() => (setOpen(!open), console.log("clicked"))}
+            >
+              <Link href="/">
+                <Image src="/github.png" alt="" width={40} height={40} />
+              </Link>
+              <Link href="/">
+                <Image src="/Xtwitter.png" alt="" width={40} height={40} />
+              </Link>
+              <Link href="/">
+                <Image src="/instagram.png" alt="" width={40} height={40} />
+              </Link>
+              <Link href="/">
+                <Image src="/facebook.png" alt="" width={40} height={40} />
+              </Link>
+              <Link href="/">
+                <Image src="/linkedin.png" alt="" width={40} height={40} />
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </div>

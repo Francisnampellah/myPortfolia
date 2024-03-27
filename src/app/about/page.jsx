@@ -3,11 +3,10 @@ import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import Lottie from "lottie-react";
-import Anime3 from "../../../public/themagic"
+import Anime3 from "../../../public/themagic";
 
 const AboutPage = () => {
   const containerRef = useRef();
-
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
@@ -35,8 +34,8 @@ const AboutPage = () => {
     "Blockchain",
     "Firebase",
     "Git",
-    "Figma"
-]
+    "Figma",
+  ];
 
   return (
     <motion.div
@@ -46,13 +45,14 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex no-scrollbar" ref={containerRef}>
-
-      
+      <div
+        className="h-full overflow-scroll lg:flex no-scrollbar"
+        ref={containerRef}
+      >
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2  ">
+        <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-8 md:gap-8 lg:gap-8 xl:gap-8 lg:w-2/3 lg:pr-0 xl:w-1/2  ">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col mt-16 gap-4 md:mt-1 sm:mt-16 justify-center items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4  ">
+          <div className="flex flex-col mt-16 gap-4 md:mt-1 sm:mt-4 justify-center items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4  ">
             {/* BIOGRAPHY IMAGE */}
             <Image
               src="/DIT.png"
@@ -62,16 +62,25 @@ const AboutPage = () => {
               className=" rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl" style={{fontFamily:"Poppins"}}>BIOGRAPHY</h1>
+            <h1
+              className="font-bold text-2xl"
+              style={{ fontFamily: "Poppins" }}
+            >
+              BIOGRAPHY
+            </h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg text-justify " style={{fontFamily:"Poppins"}}>
-            Baraka Francis Nampellah is a multifaceted professional at the intersection of technology and creativity. With a diploma in Telecommunication and Electronics Engineering from Arusha Technical College and a Bachelors degree in Computer Engineering from Dar es Salaam Institute of Technology, Baraka brings a wealth of technical expertise to his work. With over three years of experience specializing in mobile development using React Native and web design with Next.js, coupled with five years of proficiency in Adobe design tools, Barakas contributions to the field are marked by innovation and excellence.
+            <p
+              className="text-lg text-justify "
+              style={{ fontFamily: "Poppins" }}
+            >
+              Baraka Francis Nampellah is a multifaceted professional at the
+              intersection of technology and creativity.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              "Simplicity is the ultmate Sophitication" ~ Leonardo Da vinci
             </span>
-        
+
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
@@ -112,19 +121,16 @@ const AboutPage = () => {
               animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4"
             >
-
-              {technologies.map((tech)=>{ return(
-
-                <div className="rounded  p-2 text-sm cursor-pointer  text-white hover:bg-white/50 hover:text-black text-white bg-slate-400/40  shadow-md border border-slate-400/40">
-                {tech}
-              </div>
-                )
-
+              {technologies.map((tech) => {
+                return (
+                  <div className="rounded  p-2 text-sm cursor-pointer  text-white hover:bg-white/50 hover:text-black text-white bg-slate-400/40  shadow-md border border-slate-400/40">
+                    {tech}
+                  </div>
+                );
               })}
-           
             </motion.div>
             {/* SKILL SCROLL SVG */}
-            <motion.svg
+            {/* <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -145,11 +151,11 @@ const AboutPage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-            </motion.svg>
+            </motion.svg> */}
           </div>
           {/* EXPERIENCE CONTAINER */}
           <div
-            className="flex flex-col gap-12 justify-center pb-48"
+            className="flex flex-col gap-4 justify-center pb-48"
             ref={experienceRef}
           >
             {/* EXPERIENCE TITLE */}
@@ -225,7 +231,7 @@ const AboutPage = () => {
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2023 - current {" "}
+                    2023 - current{" "}
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded  items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30  text-sm font-semibold w-fit">
@@ -242,7 +248,7 @@ const AboutPage = () => {
                     Freelancer{" "}
                   </div>
                   {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
+                  <div className=" p-3 text-sm italic">
                     I provided web solutions, applying a range of technologies
                     to address client requirements.{" "}
                   </div>
@@ -265,9 +271,7 @@ const AboutPage = () => {
             </motion.div>
           </div>
         </div>
-    
-        </div>
-    
+      </div>
     </motion.div>
   );
 };
