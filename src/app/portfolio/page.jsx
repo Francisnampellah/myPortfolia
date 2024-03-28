@@ -13,10 +13,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const tabs_data = {
-  tab1: ["/sure.png", "/DIT.jpg", "/DIT.png", "/DIT.jpg"],
-  tab2: ["/works/tab11.jpg", "/works/tab12.jpg", "/works/tab13.jpg"],
-  tab3: ["/works/tab21.jpg", "/works/tab22.jpg", "/works/tab23.jpg"],
-};
+  tab1: ["/works/rentalApp.png", "/works/pcProductDesign.png", "/works/pcLogoDesign.png" ],
+  tab2: ["/works/mobLogoDesign.png", "/works/Product Design.png", "/works/mobRental.png"],
+ };
 
 const PortfolioPage = () => {
   const [pc, setImage] = useState(tabs_data.tab1);
@@ -69,16 +68,14 @@ const PortfolioPage = () => {
                     />
                   )}
                 </div>
-                <div>hello</div>
-              </SwiperSlide>
+               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </section>
       <div className="h-fit w-full flex justify-center px-8 pt-4">
         <div className="flex-1 h-fit lg:w-1/2 self-center flex flex-col gap-8 items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4 ">
-          {size.width}
-        </div>
+         </div>
       </div>
     </motion.div>
   );
