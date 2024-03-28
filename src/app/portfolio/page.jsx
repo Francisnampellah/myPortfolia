@@ -54,8 +54,8 @@ const PortfolioPage = () => {
                   {isPhone ? (
                     <Image
                       src={image}
-                      height={100}
-                      width={100}
+                      height={621}
+                      width={414}
                       alt={image.alt}
                       className="flex justify-center items-center h-full w-full object-cover "
                     />
