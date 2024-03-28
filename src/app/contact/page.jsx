@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
+ 
 const ContactPage = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState();
@@ -33,6 +33,13 @@ const ContactPage = () => {
     return true;
   };
 
+  if(success){
+     setTimeout(() => {
+      setSuccess(false);
+    }, 5000);
+    
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
     setPreloader(true);
@@ -53,6 +60,7 @@ const ContactPage = () => {
       )
       .then(
         () => {
+          setError(false)
           setSuccess(true);
           setPreloader(false);
           form.current.reset();
@@ -62,31 +70,6 @@ const ContactPage = () => {
         }
       );
   };
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   setPreloader(true);
-  //   setError(false);
-  //   setSuccess(false);
-
-  //   emailjs
-  //     .sendForm(
-  //       process.env.NEXT_PUBLIC_SERVICE_ID,
-  //       process.env.NEXT_PUBLIC_TEMPLATE_ID,
-  //       form.current,
-  //       process.env.NEXT_PUBLIC_PUBLIC_KEY
-  //     )
-  //     .then(
-  //       () => {
-  //         setSuccess(true);
-  //         setPreloader(false);
-  //         form.current.reset();
-  //       },
-  //       () => {
-  //         setError(true);
-  //       }
-  //     );
-  // };
 
   return (
     <motion.div
@@ -122,26 +105,53 @@ const ContactPage = () => {
               class=" flex flex-col text-red-800 my-2 px-4 py-3 rounded relative  bg-slate-600/30 rounded-lg shadow-md backdrop-blur border border-slate-600/30 rounded-lg shadow-md backdrop-blur border border-white/30 p-4"
               role="alert"
             >
-              <div className="flex flex-row justify-between"> 
-
-              <strong class="font-bold">An Error has Occur </strong>
-              <span
-                class="absolute top-0 bottom-0 right-0 px-4 py-3"
-                onClick={() => setError(false)}
+              <div className="flex flex-row justify-between">
+                <strong class="font-bold">An Error has Occur </strong>
+                <span
+                  class="absolute top-0 bottom-0 right-0 px-4 py-3"
+                  onClick={() => setError(false)}
                 >
-                <svg
-                  class="fill-current h-6 w-6 text-red-500"
-                  role="button"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
+                  <svg
+                    class="fill-current h-6 w-6 text-red-500"
+                    role="button"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
                   >
-                  <title>Close</title>
-                  <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-                </svg>
-              </span>
-                  </div>
+                    <title>Close</title>
+                    <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                  </svg>
+                </span>
+              </div>
               <span class="block sm:inline">{error}</span>
             </div>
+          ) : (
+            ""
+          )}
+           {success ? (
+            <motion.div
+             initial={{ y: "-200vh" }}
+            animate={{ y: "0%" }}
+            transition={{ duration: 1 }}
+              class=" flex flex-col text-green-800 my-2 px-4 py-3 rounded relative  bg-slate-600/30 rounded-lg shadow-md backdrop-blur border border-green-600/30 rounded-lg shadow-md backdrop-blur border border-white/30 p-4"
+              role="alert"
+            >
+              <div className="flex flex-row justify-between">
+                <strong class="font-bold">Email Send  </strong>
+                <span
+                  class="absolute top-0 bottom-0 right-0 px-4 py-3"
+                 >
+                  <svg
+                    class="fill-current h-6 w-6 text-green-500"
+                    role="button"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <title>Close</title>
+                    <path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
+                  </svg>
+                </span>
+              </div>
+             </motion.div >
           ) : (
             ""
           )}
@@ -188,8 +198,8 @@ const ContactPage = () => {
               />
             </div>
             <button
-              type="submit"
-              class={
+             type="submit"
+               class={
                 preloader
                   ? "text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  p-4 text-white bg-green-400/100 focus:bg-green-700/60 rounded-lg shadow-md border border-slate-400/100 "
                   : "text-white font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2  p-4 text-white bg-blue-400/100 focus:bg-blue-700/60 rounded-lg shadow-md border border-slate-400/100 "

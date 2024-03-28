@@ -1,77 +1,57 @@
-import Image from "next/image";
 import { useState } from "react";
-import Swipe from "react-easy-swipe";
+import {
+  BsFillArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+} from "react-icons/bs";
+import Image from "next/image";
 
-/**
- * Carousel component for nextJS and Tailwind.
- * Using external library react-easy-swipe for swipe gestures on mobile devices (optional)
- *
- * @param images - Array of images with src and alt attributes
- * @returns React component
- */
-export default function Carousel({ images }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
+export default function Carousel({ slides }) {
+  let [current, setCurrent] = useState(0);
 
-  const handleNextSlide = () => {
-    let newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;
-    setCurrentSlide(newSlide);
+  let previousSlide = () => {
+    if (current === 0) setCurrent(slides.length - 1);
+    else setCurrent(current - 1);
   };
 
-  const handlePrevSlide = () => {
-    let newSlide = currentSlide === 0 ? images.length - 1 : currentSlide - 1;
-    setCurrentSlide(newSlide);
+  let nextSlide = () => {
+    if (current === slides.length - 1) setCurrent(0);
+    else setCurrent(current + 1);
   };
 
   return (
-    <div className="relative">
+    <div className="overflow-hidden relative">
       <div
-        onClick={handlePrevSlide}
-        className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
+        className={`flex transition ease-out duration-40`}
+        style={{
+          transform: `translateX(-${current * 100}%)`,
+        }}
       >
-        left
-      </div>
-      <div className="w-full h-[50vh] flex overflow-hidden relative m-auto">
-        <Swipe
-          onSwipeLeft={handleNextSlide}
-          onSwipeRight={handlePrevSlide}
-          className="relative z-10 w-full h-full"
-        >
-          {images.map((image, index) => {
-            if (index === currentSlide) {
-              return (
-                <Image
-                  key={image.id}
-                  src={image}
-                  layout="fill"
-                  objectFit="contain"
-                  className="animate-fadeIn"
-                />
-              );
-            }
-          })}
-        </Swipe>
-      </div>
-      <div
-        onClick={handleNextSlide}
-        className="absolute right-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
-      >
-        right
+        {slides.map((s) => {
+          return <Image width={100} height={100} src={s} />;
+        })}
       </div>
 
-      <div className="relative flex justify-center p-2">
-        {images.map((_, index) => {
+      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl">
+        <button onClick={previousSlide}>
+          <BsFillArrowLeftCircleFill />
+        </button>
+        <button onClick={nextSlide}>
+          <BsFillArrowRightCircleFill />
+        </button>
+      </div>
+
+      <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+        {slides.map((s, i) => {
           return (
             <div
-              className={
-                index === currentSlide
-                  ? "h-4 w-4 bg-gray-700 rounded-full mx-2 mb-2 cursor-pointer"
-                  : "h-4 w-4 bg-gray-300 rounded-full mx-2 mb-2 cursor-pointer"
-              }
-              key={index}
               onClick={() => {
-                setCurrentSlide(index);
+                setCurrent(i);
               }}
-            />
+              key={"circle" + i}
+              className={`rounded-full w-5 h-5 cursor-pointer  ${
+                i == current ? "bg-white" : "bg-gray-500"
+              }`}
+            ></div>
           );
         })}
       </div>
