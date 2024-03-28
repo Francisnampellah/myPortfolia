@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
+import { useWindowSize } from "./windowSize";
 
 const links = [
   { url: "/", title: "Home" },
@@ -15,6 +16,10 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const size = useWindowSize();
+
+ 
 
   const topVariants = {
     closed: {
@@ -69,7 +74,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
+    <div className="h-12 md:h-16 fixed w-full self-center z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
@@ -82,7 +87,7 @@ const Navbar = () => {
           href="/"
           className="text-sm  rounded-md p-1 font-semibold flex items-center justify-center"
         >
-          <Image src={"/blue.png"} width={50} height={50} />
+          <Image src={"/blue.png"} width={ size.width < 768 ? 30 : 50} height={size.width < 768 ? 30 : 50} />
         </Link>
       </div>
       {/* SOCIAL */}
@@ -107,23 +112,23 @@ const Navbar = () => {
       <div className="md:hidden">
         {/* MENU BUTTON */}
         <button
-          className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          className="w-8 h-6 md:w-10 md:h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setOpen((prev) => !prev)}
         >
           <motion.div
             variants={topVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-8 md:w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
           <motion.div
             variants={centerVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded"
+            className="w-8 md:w-10 h-1 bg-black rounded"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-8 md:w-10 h-1 bg-black rounded origin-left"
           ></motion.div>
         </button>
         {/* MENU LIST */}
