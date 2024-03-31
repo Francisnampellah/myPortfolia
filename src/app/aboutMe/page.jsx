@@ -25,12 +25,10 @@ const AboutPage = () => {
     "MongoDB",
     "PostgreSQL",
     "Node.js",
-    "Nest.js",
-    "Express.js",
+     "Express.js",
     "Redux",
     "Framer Motion",
-    "Three.js",
-    "Webpack",
+     "Python ",
     "Blockchain",
     "Firebase",
     "Git",
@@ -73,8 +71,9 @@ const AboutPage = () => {
               className="text-lg text-justify "
               style={{ fontFamily: "Poppins" }}
             >
-              Baraka Francis Nampellah is a multifaceted professional at the
-              intersection of technology and creativity.
+              I'm Baraka Francis Nampellah, a DIT-trained Computer Engineer with
+              4 years of experience in software development and graphic design.
+              I offer my expertise as a freelancer.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">

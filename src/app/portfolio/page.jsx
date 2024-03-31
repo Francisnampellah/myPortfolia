@@ -1,11 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
-import { useRef } from "react";
+ 
 import { useEffect, useState } from "react";
-import { Carousel } from "flowbite-react";
-import { Navigation, Pagination } from "swiper/modules";
+ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useWindowSize } from "@/components/windowSize";
 

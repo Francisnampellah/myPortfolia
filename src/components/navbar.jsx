@@ -9,7 +9,7 @@ import { useWindowSize } from "./windowSize";
 
 const links = [
   { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
+  { url: "/aboutMe", title: "AboutMe" },
   { url: "/portfolio", title: "Portfolio" },
   { url: "/contact", title: "Contact" },
 ];
@@ -18,8 +18,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const size = useWindowSize();
-
- 
 
   const topVariants = {
     closed: {
@@ -87,24 +85,28 @@ const Navbar = () => {
           href="/"
           className="text-sm  rounded-md p-1 font-semibold flex items-center justify-center"
         >
-          <Image src={"/blue.png"} width={ size.width < 768 ? 30 : 50} height={size.width < 768 ? 30 : 50} />
+          <Image
+            src={"/blue.png"}
+            width={size.width < 768 ? 30 : 50}
+            height={size.width < 768 ? 30 : 50}
+          />
         </Link>
       </div>
       {/* SOCIAL */}
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="/">
+        <Link href="https://github.com/francisnampellah">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://twitter.com/bnampellah1">
           <Image src="/Xtwitter.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.instagram.com/francis_nampellah">
           <Image src="/instagram.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.facebook.com/baraka.nampellah">
           <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/baraka-nampellah-b1700b144/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
@@ -159,19 +161,19 @@ const Navbar = () => {
               className=" flex flex-row gap-4 w-1/2"
               onClick={() => (setOpen(!open), console.log("clicked"))}
             >
-              <Link href="/">
+              <Link href="https://github.com/francisnampellah">
                 <Image src="/github.png" alt="" width={40} height={40} />
               </Link>
-              <Link href="/">
+              <Link href="https://twitter.com/bnampellah1">
                 <Image src="/Xtwitter.png" alt="" width={40} height={40} />
               </Link>
-              <Link href="/">
+              <Link href="https://www.instagram.com/francis_nampellah">
                 <Image src="/instagram.png" alt="" width={40} height={40} />
               </Link>
-              <Link href="/">
+              <Link href="https://www.facebook.com/baraka.nampellah">
                 <Image src="/facebook.png" alt="" width={40} height={40} />
               </Link>
-              <Link href="/">
+              <Link href="https://www.linkedin.com/in/baraka-nampellah-b1700b144/">
                 <Image src="/linkedin.png" alt="" width={40} height={40} />
               </Link>
             </motion.div>
