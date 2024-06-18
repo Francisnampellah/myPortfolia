@@ -16,7 +16,6 @@ const Homepage = () => {
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* IMAGE CONTAINER */}
         <div className="flex-1 lg:h-full lg:w-1/2 relative">
-          {/* <Image src="/hero.png" alt="" fill className="object-contain" /> */}
 
           <Lottie
             animationData={Anime}
@@ -42,7 +41,7 @@ const Homepage = () => {
             <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
             </button>
-            <a href="/about">
+            <a href="/aboutMe">
               <button className="p-4 rounded-lg ring-1 ring-black">
                 About Me
               </button>
