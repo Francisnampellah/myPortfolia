@@ -1,9 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
- 
+
 import { useEffect, useState } from "react";
- import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useWindowSize } from "@/components/windowSize";
 
@@ -12,9 +12,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const tabs_data = {
-  tab1: ["/works/rentalApp.png", "/works/pcProductDesign.png", "/works/pcLogoDesign.png" ],
-  tab2: ["/works/mobLogoDesign.png", "/works/Product Design.png", "/works/mobRental.png"],
- };
+  tab1: [
+    "/works/beizakarikoosm.png",
+    "/works/beizakarikoo.png",
+    "/works/rentalApp.png",
+    "/works/pcProductDesign.png",
+    "/works/pcLogoDesign.png",
+  ],
+  tab2: [
+    "/works/mobLogoDesign.png",
+    "/works/Product Design.png",
+    "/works/mobRental.png",
+  ],
+};
 
 const PortfolioPage = () => {
   const [pc, setImage] = useState(tabs_data.tab1);
@@ -51,34 +61,48 @@ const PortfolioPage = () => {
               <SwiperSlide key={index}>
                 <div className="flex h-full w-full ">
                   {isPhone ? (
-                    <Image
-                      src={image}
-                      height={621}
-                      width={414}
-                      alt={image.alt}
-                      className="flex justify-center items-center h-full w-full object-cover "
-                    />
+                    <a
+                      href={
+                        index == 0 || index == 1
+                          ? "https://beizakarikakoo-f3ckju19l-francisnampellahs-projects.vercel.app/"
+                          : ""
+                      }
+                    >
+                      <Image
+                        src={image}
+                        height={621}
+                        width={414}
+                        alt={image.alt}
+                        className="flex justify-center items-center h-full w-full object-cover "
+                      />
+                    </a>
                   ) : (
-                    <Image
-                      src={image}
-                      fill
-                      alt={image.alt}
-                      className="flex justify-center items-center h-full w-full object-contain "
-                    />
+                    <a
+                      href={
+                        index == 0 || index == 1
+                          ? "https://beizakarikakoo-f3ckju19l-francisnampellahs-projects.vercel.app/"
+                          : ""
+                      }
+                    >
+                      <Image
+                        src={image}
+                        fill
+                        alt={image.alt}
+                        className="flex justify-center items-center h-full w-full object-contain "
+                      />
+                    </a>
                   )}
                 </div>
-               </SwiperSlide>
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </section>
       <div className="h-fit w-full flex justify-center px-8 pt-4">
-        <div className="flex-1 h-fit lg:w-1/2 self-center flex flex-col gap-8 items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4 ">
-         </div>
+        <div className="flex-1 h-fit lg:w-1/2 self-center flex flex-col gap-8 items-center justify-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4 "></div>
       </div>
     </motion.div>
   );
 };
- 
 
 export default PortfolioPage;
