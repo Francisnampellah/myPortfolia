@@ -36,7 +36,7 @@ const PortfolioPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <section className="pt-12 flex justify-center items-center flex flex-col ">
+      <section className="pt-12 flex justify-center items-center flex-col ">
         <div className="container mt-8 justify-center items-center">
           <Swiper
             navigation
@@ -45,7 +45,7 @@ const PortfolioPage = () => {
             }}
             modules={[Navigation, Pagination]}
             onSwiper={(swiper) => console.log(swiper)}
-            className="h-[96%] md:h-96 w-[95%] rounded-lg bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 flex justify-center items-center"
+            className="h-[96%] md:h-96 w-[95%] rounded-lg bg-gray-400/30 shadow-md backdrop-blur border border-gray-400/30 flex justify-center items-center"
           >
             {pc.map((image, index) => (
               <SwiperSlide key={index}>

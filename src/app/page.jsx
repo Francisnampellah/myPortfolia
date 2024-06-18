@@ -13,7 +13,6 @@ const Homepage = () => {
     >
       <div className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 justify-center items-center">
         <div className="flex-1 lg:h-full lg:w-1/2">
-          {/* <Image src="/hero.png" alt="" fill className="object-contain" /> */}
           <Lottie
             animationData={Anime}
             fill
