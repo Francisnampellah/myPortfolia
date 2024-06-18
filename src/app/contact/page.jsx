@@ -102,7 +102,7 @@ const ContactPage = () => {
         <div className="flex w-[80%] md:w-[45%] flex-col self-center justify-center  bg-slate-800/30 rounded-lg shadow-md backdrop-blur border border-slate-800/30 rounded-lg shadow-md backdrop-blur border border-white/30 p-4 self-center">
           {error ? (
             <div
-              class=" flex flex-col text-red-800 my-2 px-4 py-3 rounded relative  bg-slate-600/30 rounded-lg shadow-md backdrop-blur border border-slate-600/30 rounded-lg shadow-md backdrop-blur border border-white/30 p-4"
+              class=" flex flex-col text-red-800 my-2 px-4 py-3 relative  bg-slate-600/30 rounded-lg shadow-md backdrop-blur border border-slate-600/30 rounded-lg shadow-md backdrop-blur border border-white/30 p-4"
               role="alert"
             >
               <div className="flex flex-row justify-between">

@@ -77,7 +77,7 @@ const AboutPage = () => {
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              "Simplicity is the ultmate Sophitication" ~ Leonardo Da vinci
+              "Simplicity is the ultimate Sophitication" ~ Leonardo Da vinci
             </span>
 
             <motion.svg
