@@ -50,7 +50,7 @@ const AboutPage = () => {
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-1 flex-col gap-8 md:gap-8 lg:gap-8 xl:gap-8 lg:w-2/3 lg:pr-0 xl:w-1/2  ">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col mt-16 gap-4 md:mt-1 sm:mt-4 justify-center items-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4  ">
+          <div className="flex max-w-72 flex-col mt-16 gap-4 md:mt-1 sm:mt-4 justify-center items-center bg-gray-400/30 rounded-lg shadow-md backdrop-blur border border-gray-400/30 p-4">
             {/* BIOGRAPHY IMAGE */}
             <Image
               src="/DIT.png"
